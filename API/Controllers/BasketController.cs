@@ -23,8 +23,8 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<CustomerBasket>> UpdateBasket(CustomerBasket basket)
         {
-            var updateBasket = await _basketRepository.UpdateBasketAsync(basket);
-            return Ok(updateBasket);
+            var updatedBasket = await _basketRepository.UpdateBasketAsync(basket);
+            return Ok(updatedBasket);
         }
 
         [HttpDelete]
